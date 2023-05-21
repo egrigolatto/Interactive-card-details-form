@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive card details form</title>
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <main>
+    <div id="container" class="container">
+<!-- lado izquierdo -->
+      <div class="cont_left">
+          <img src="./images/bg-main-desktop.png" alt="" class="bg-main-desktop">
+          <img src="./images/bg-main-mobile.png" alt="" class="bg-main-mobile">
+          
+         <div class="cont_cards">
+          <div class="card_front">
+            <img src="./images/bg-card-front.png" alt="" class="bg-card-front">
+            <img src="./images/card-logo.svg" alt="" class="logo_front-card">
+            <p id="number_card-front">0000 0000 0000 0000</p>
+            <div class="info_card-front">
+              <p id="name_card-front">Jane Appleseed</p>
+              <div>
+                <p id="month_card-front">00</p>
+                /
+                <p id="year_card-front">00</p>
+              </div>
+            </div>
+          </div>
+          <div class="cont_back">
+            <img src="./images/bg-card-back.png" class="bg-card-back" alt="">
+            <p id="cvc_card-back">000</p>
+          </div>
+         </div>
+      </div>
+      <!-- lado derecho -->
+      <div class="cont_right">
+        <form id="form">
+          <div class="form_name">
+            <label for="card_name">Cardholder Name</label>
+            <input 
+              type="text"
+              placeholder="e.g. Jane Appleseed"
+              id="card_name"
+              required
+              maxlength="60"
+              minlength="5"
+            >
+            <span class="error" id="nameError"></span>
+          </div>
+          <div class="form_number">
+            <label for="card_number">Card Number</label>
+            <input type="text"
+            placeholder="e.g. 1234 5678 9123 0000"
+            id="card_number"
+            required
+            maxlength="19"
+            minlength="19"
+            >
+            <span class="error" id="numberError"></span>
+          </div>
+          <div class="form_date_cvc">
+            <div class="form_date">
+              <label>Exp. Date (MM/YY)</label>
+              <div class="date_inputs">
+                <input type="text"
+                placeholder="MM"
+                id="date_month"
+                required
+                maxlength="2"
+                minlength="1"
+                >
+                <input type="text"
+                placeholder="YY"
+                id="date_year"
+                required
+                maxlength="2"
+                minlength="2"
+                >
+              </div>
+              <span class="error" id="monthError"></span>
+              <span class="error" id="yearError"></span>
+            </div>
+            <div class="form_cvc">
+              <label>cvc</label>
+              <input type="text"
+              placeholder=" e.g. 123"
+              id="input_cvc"
+              required
+              maxlength="3"
+              minlength="3"
+              >
+              <span class="error" id="cvcError"></span>
+            </div>
+          </div>
+          <input
+           type="button" 
+           value="Confirm"
+           id="submit_btn"
+           >
+        </form>
+        <!-- thank -->
+        <div id="thank" class="thank">
+          <img src="./images/icon-complete.svg" alt="Completed" />
+          <h1>Thank you!</h1>
+          <p>We've added your card details</p>
+          <button id="btn-continue">Continue</button>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
